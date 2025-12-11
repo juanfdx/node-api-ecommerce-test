@@ -1,0 +1,107 @@
+# --------------------------------------------------
+# Node API - .gitignore
+# --------------------------------------------------
+
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build output
+dist/
+build/
+coverage/
+.tmp/
+temp/
+
+# TypeScript
+*.tsbuildinfo
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Debugging
+*.log
+debug.log
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Cache
+.cache/
+.next/
+.nuxt/
+.svelte-kit/
+vite.config.ts.timestamp*
+rollup.config.ts.timestamp*
+.eslintcache/
+.parcel-cache/
+.fusebox/
+.rpt2_cache/
+.turbo/
+turbo/
+cache/
+
+# Serverless
+.serverless/
+.vercel/
+.netlify/
+
+# Dependency directories
+jspm_packages/
+bower_components/
+
+# Optional eslint / prettier
+.prettiercache
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+desktop.ini
+
+# Editor directories & files
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+.idea/
+*.iml
+
+# Test output
+test-output/
+reports/
+
+# Docker
+docker-data/
+*.sqlite
+*.sqlite-journal
+
+# Local certificates
+*.pem
+*.key
+
+# Misc
+*.swp
+*.swo
+*.orig
+
