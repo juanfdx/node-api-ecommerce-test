@@ -1,7 +1,7 @@
 import express from 'express';
-import cors from 'cors';
 import { StatusCodes } from 'http-status-codes';
-// import { ALLOWED_ORIGIN } from './config/index.js';
+import cors from 'cors';
+import { corsOptions } from './config/cors.js';
 //ROUTES FOLDER
 import productRoutes from './routes/product.routes.js';
 
@@ -10,17 +10,6 @@ const app = express();
 
 //MIDDLEWARES
 app.use(express.json());
-
-
-// app.use(cors({
-//   origin: ALLOWED_ORIGIN,
-//   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'], // Add other methods if needed
-// }));;
-
-
-
-import { corsOptions } from './config/cors.js';
-
 app.use(cors(corsOptions));
 
 
@@ -42,7 +31,7 @@ app.use((err, req, res, next) => {
 });
 
 /*-------------------------
-  🚫 404 - Route Not Found
+  404 - Route Not Found
  ------------------------ */
 app.all(/.*/, (req, res) => {
   res
@@ -52,7 +41,7 @@ app.all(/.*/, (req, res) => {
 
 
 /*-------------------------
-  ❌ Global Error Handler
+  Global Error Handler
  ------------------------ */
 app.use((err, req, res, next) => {
   console.error('🔥 ERROR:', err);
